@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  background-image: url("images/eiffel_tower_at_night_paris_france-wallpaper-2880x1800.jpg");
+  background-position: center top;
+  background-size: 100%;
+  height: 500px;
+  padding: 20px 50px;
+}
+
+.menu span {
+  font-size: 15px;
+  margin-right: 15px;
+  color: white;
+}
+
+.menu span:first-child {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.menu button {
+  float: right;
+  height: 31px;
+  width: 100px;
+  background: none;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+}
+
+.heading {
+  color: white;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading span:first-child {
+  font-size: 70px;
+}
+
+.heading span:last-child {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 180px;
+}
+
+.btns button {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.4);
+  border: 0.5px solid rgba(0, 0, 0, 0.4);
+  height: 45px;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.btns .date-btn {
+  width: 200px;
+}
+
+.btns .search-btn button {
+  background-color: rgb(255, 78, 93);
+  color: white;
+  border: none;
+}
