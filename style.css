@@ -6,14 +6,18 @@ body {
 header {
   background-image: url("images/eiffel_tower_at_night_paris_france-wallpaper-2880x1800.jpg");
   background-position: center top;
-  background-size: 100%;
   height: 500px;
   padding: 20px 50px;
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+}
+
 .menu span {
   font-size: 15px;
-  margin-right: 15px;
+  margin-right: 20px;
   color: white;
 }
 
@@ -23,7 +27,7 @@ header {
 }
 
 .menu button {
-  float: right;
+  margin-left: auto;
   height: 31px;
   width: 100px;
   background: none;
@@ -34,26 +38,28 @@ header {
 
 .heading {
   color: white;
-  margin-top: 150px;
+  height: 93%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.heading span:first-child {
-  font-size: 70px;
+.heading h1 {
+  font-size: 50px;
 }
 
-.heading span:last-child {
-  margin-top: 20px;
-  font-size: 30px;
+.heading h3 {
+  font-size: 25px;
 }
 
 .btns {
   display: flex;
   justify-content: center;
-  margin: auto;
-  margin-top: 180px;
+  position: absolute;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .btns button {
@@ -63,10 +69,6 @@ header {
   height: 45px;
   width: 100%;
   padding: 0 50px;
-}
-
-.btns .date-btn {
-  width: 200px;
 }
 
 .btns .search-btn button {
