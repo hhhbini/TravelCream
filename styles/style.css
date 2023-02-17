@@ -14,6 +14,8 @@ body {
 
 header {
   background-image: url("https://i.ytimg.com/vi/MW8F7-4uzf0/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center top;
   height: 500px;
   padding: 20px 120px;
@@ -90,8 +92,8 @@ header {
 }
 
 section {
-  height: 870px;
   margin: 10px 120px;
+  margin-bottom: 30px;
 }
 
 .section-menu {
@@ -126,18 +128,15 @@ section {
   border-bottom: var(--border);
   padding: 30px 0;
   display: flex;
-}
-
-.flights-section__contents__header div {
-  width: 610px;
-  margin: 0 80px 0 120px;
-  display: flex;
   justify-content: space-between;
 }
 
-.flights-section__contents__header div span {
-  width: 100px;
-  text-align: center;
+.flights-section__contents__header span {
+  margin-right: 60px;
+}
+
+.flights-section__contents__header span:first-child {
+  margin-right: 80px;
 }
 
 .flights-section__contents__inform {
@@ -179,16 +178,55 @@ section {
   width: 100px;
   height: 40px;
   background: none;
-  border: 1px solid var(--pink);
+  border: 1.7px solid var(--pink);
+  font-weight: var(--bold-weight);
   border-radius: 5px;
   color: var(--pink);
 }
 
 .section-all {
   padding: 30px 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .section-all span {
   color: var(--light-grey);
-  float: right;
+}
+
+.hotels-section main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hotels-section__contents {
+  width: 350px;
+  height: 370px;
+  border: var(--border);
+  margin: 30px 0 0 0;
+}
+
+.hotels-section__contents img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+.hotels-section__contents__inform {
+  padding: 20px;
+}
+
+.hotels-section__contents__inform h3 {
+  font-weight: 400;
+}
+
+.hotels-section__contents__inform div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.hotels-section__contents__inform span {
+  color: var(--light-grey);
 }
