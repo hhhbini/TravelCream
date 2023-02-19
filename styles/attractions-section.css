@@ -1,0 +1,53 @@
+.attractions-section main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.attractions-section__contents {
+  position: relative;
+}
+
+.attractions-section__contents img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.big {
+  width: 350px;
+  height: 525px;
+  margin: 0 30px 0 0;
+}
+
+.medium {
+  width: 730px;
+  height: 247.5px;
+}
+
+.medium:first-child {
+  margin-bottom: 30px;
+}
+
+.small {
+  width: 350px;
+  height: 260px;
+  margin: 30px 30px 0 0;
+}
+
+.small:last-child {
+  margin-right: 0;
+}
+
+.attractions-section__contents span {
+  color: white;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: var(--medium-size);
+}

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <header>
@@ -38,408 +38,456 @@
       </form>
     </header>
 
-    <section class="flights-section">
-      <div class="section-menu">
-        <span>flights</span>
-        <ul>
-          <li>Non stop</li>
-          <li>Best Price</li>
-          <li>Airline</li>
-          <li>Schedule</li>
-        </ul>
-      </div>
-
-      <div class="flights-section__contents">
-        <div div class="flights-section__contents__header">
-          <span>Airline</span>
-          <span>Date</span>
-          <span>Departure</span>
-          <span>Arrival</span>
-          <span>Time</span>
-          <span>Price</span>
+    <div class="main-screen">
+      <section class="flights-section">
+        <div class="section-menu">
+          <span>flights</span>
+          <ul>
+            <li>Non stop</li>
+            <li>Best Price</li>
+            <li>Airline</li>
+            <li>Schedule</li>
+          </ul>
         </div>
-        <div class="flights-section__contents__inform">
-          <div>
+
+        <div class="flights-section__contents">
+          <div div class="flights-section__contents__header">
+            <span>Airline</span>
+            <span>Date</span>
+            <span>Departure</span>
+            <span>Arrival</span>
+            <span>Time</span>
+            <span>Price</span>
+          </div>
+          <div class="flights-section__contents__inform">
+            <div>
+              <img
+                src="https://blog.kakaocdn.net/dn/G1exv/btrNhgCiXez/3L04vyINyIhwH7RutKAHE1/img.png"
+              />
+              <div>
+                <span>Korean</span>
+                <span>AA63</span>
+              </div>
+            </div>
+            <div>
+              <span>20/2/2023</span>
+              <span>In 3 days</span>
+            </div>
+            <div>
+              <span>Paris (CDG)</span>
+              <span>01:00</span>
+            </div>
+            <div>
+              <span>Incheone</span>
+              <span>10:00</span>
+            </div>
+            <div>
+              <span>14:00</span>
+              <span>CDG - ICN</span>
+            </div>
+            <button class="buy-btn">980 $</button>
+          </div>
+          <div class="flights-section__contents__inform">
+            <div>
+              <img
+                src="data:image/png;base64,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"
+              />
+              <div>
+                <span>Delta</span>
+                <span>DL405</span>
+              </div>
+            </div>
+            <div>
+              <span>20/2/2023</span>
+              <span>In 3 days</span>
+            </div>
+            <div>
+              <span>Paris (CDG)</span>
+              <span>02:30</span>
+            </div>
+            <div>
+              <span>Incheone</span>
+              <span>11:00</span>
+            </div>
+            <div>
+              <span>13:30</span>
+              <span>CDG - ICN</span>
+            </div>
+            <button class="buy-btn">1340 $</button>
+          </div>
+          <div class="flights-section__contents__inform">
+            <div>
+              <img
+                src="https://play-lh.googleusercontent.com/HJ6MQsjz-6msAPfMwN5zk1vV_A8cg46yQm_B2FGY7UfDkSittNbbhxFggFIVfxKkgw"
+              />
+              <div>
+                <span>Air France</span>
+                <span>VO1367</span>
+              </div>
+            </div>
+            <div>
+              <span>20/2/2023</span>
+              <span>In 3 days</span>
+            </div>
+            <div>
+              <span>Paris (CDG)</span>
+              <span>07:15</span>
+            </div>
+            <div>
+              <span>Incheone</span>
+              <span>5:00</span>
+            </div>
+            <div>
+              <span>13:45</span>
+              <span>CDG - ICN</span>
+            </div>
+            <button class="buy-btn">870 $</button>
+          </div>
+          <div class="flights-section__contents__inform">
+            <div>
+              <img
+                src="https://play-lh.googleusercontent.com/mgKLlE_So9cBalX46ofXoULVycQ3N_zMUOn-pCJ7nA5Eww5vqL-oArWYkII9kavlZD0"
+              />
+              <div>
+                <span>Vueling</span>
+                <span>VO1367</span>
+              </div>
+            </div>
+            <div>
+              <span>20/2/2023</span>
+              <span>In 3 days</span>
+            </div>
+            <div>
+              <span>Paris (CDG)</span>
+              <span>07:15</span>
+            </div>
+            <div>
+              <span>Incheone</span>
+              <span>5:00</span>
+            </div>
+            <div>
+              <span>13:45</span>
+              <span>CDG - ICN</span>
+            </div>
+            <button class="buy-btn">870 $</button>
+          </div>
+          <div class="flights-section__contents__inform">
+            <div>
+              <img
+                src="https://mblogthumb-phinf.pstatic.net/20131030_122/jayjaewonhan_13831101361537N6oW_PNG/Asiana-Airlines-logo_%281%29.png?type=w2"
+              />
+              <div>
+                <span>Asiana</span>
+                <span>T04330</span>
+              </div>
+            </div>
+            <div>
+              <span>20/2/2023</span>
+              <span>In 3 days</span>
+            </div>
+            <div>
+              <span>Paris (CDG)</span>
+              <span>02:00</span>
+            </div>
+            <div>
+              <span>Incheone</span>
+              <span>10:00</span>
+            </div>
+            <div>
+              <span>14:00</span>
+              <span>CDG - ICN</span>
+            </div>
+            <button class="buy-btn">930 $</button>
+          </div>
+        </div>
+
+        <div class="section-all">
+          <span>See all flights</span>
+        </div>
+      </section>
+
+      <section class="hotels-section">
+        <div class="section-menu">
+          <span>Hotels</span>
+          <ul>
+            <li>Best Price</li>
+            <li>Distance</li>
+          </ul>
+        </div>
+
+        <main>
+          <div class="hotels-section__contents">
             <img
-              src="https://blog.kakaocdn.net/dn/G1exv/btrNhgCiXez/3L04vyINyIhwH7RutKAHE1/img.png"
+              src="https://static.trip101.com/paragraph_media/pictures/000/490/764/large/2a7fb442_original.jpg?1517469600"
             />
-            <div>
-              <span>Korean</span>
-              <span>AA63</span>
+            <div class="hotels-section__contents__inform">
+              <h3 class="hotels-section__contents__name">
+                Hotel Paris Quest Acherse
+              </h3>
+              <div>
+                <span>2.3 km</span>
+                <span>Free Wi-Fi</span>
+              </div>
+              <button class="buy-btn">30 $</button>
             </div>
           </div>
-          <div>
-            <span>20/2/2023</span>
-            <span>In 3 days</span>
-          </div>
-          <div>
-            <span>Paris (CDG)</span>
-            <span>01:00</span>
-          </div>
-          <div>
-            <span>Incheone</span>
-            <span>10:00</span>
-          </div>
-          <div>
-            <span>14:00</span>
-            <span>CDG - ICN</span>
-          </div>
-          <button class="buy-btn">980 $</button>
-        </div>
-        <div class="flights-section__contents__inform">
-          <div>
+          <div class="hotels-section__contents">
             <img
-              src="data:image/png;base64,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"
+              src="https://www.guestapartment.com/wp-content/uploads/2013/01/3-Windows-on-Seine-Paris.png"
             />
-            <div>
-              <span>Delta</span>
-              <span>DL405</span>
+            <div class="hotels-section__contents__inform">
+              <h3 class="hotels-section__contents__name">
+                L`Hotel du Collectionneur
+              </h3>
+              <div>
+                <span>9.8 km</span>
+                <span>Free Wi-Fi</span>
+              </div>
+              <button class="buy-btn">38 $</button>
             </div>
           </div>
-          <div>
-            <span>20/2/2023</span>
-            <span>In 3 days</span>
-          </div>
-          <div>
-            <span>Paris (CDG)</span>
-            <span>02:30</span>
-          </div>
-          <div>
-            <span>Incheone</span>
-            <span>11:00</span>
-          </div>
-          <div>
-            <span>13:30</span>
-            <span>CDG - ICN</span>
-          </div>
-          <button class="buy-btn">1340 $</button>
-        </div>
-        <div class="flights-section__contents__inform">
-          <div>
+          <div class="hotels-section__contents">
             <img
-              src="https://play-lh.googleusercontent.com/HJ6MQsjz-6msAPfMwN5zk1vV_A8cg46yQm_B2FGY7UfDkSittNbbhxFggFIVfxKkgw"
+              src="https://56paris.com/storage/uploads/f3313832-3b84-48cc-805f-e6fd14df1d8c/paris-legal-victory-over-airbnb.jpg"
             />
-            <div>
-              <span>Air France</span>
-              <span>VO1367</span>
+            <div class="hotels-section__contents__inform">
+              <h3 class="hotels-section__contents__name">Hotel Eiffel Seine</h3>
+              <div>
+                <span>17.6 km</span>
+                <span>Free Wi-Fi</span>
+              </div>
+              <button class="buy-btn">42 $</button>
             </div>
           </div>
-          <div>
-            <span>20/2/2023</span>
-            <span>In 3 days</span>
-          </div>
-          <div>
-            <span>Paris (CDG)</span>
-            <span>07:15</span>
-          </div>
-          <div>
-            <span>Incheone</span>
-            <span>5:00</span>
-          </div>
-          <div>
-            <span>13:45</span>
-            <span>CDG - ICN</span>
-          </div>
-          <button class="buy-btn">870 $</button>
-        </div>
-        <div class="flights-section__contents__inform">
-          <div>
+          <div class="hotels-section__contents">
             <img
-              src="https://play-lh.googleusercontent.com/mgKLlE_So9cBalX46ofXoULVycQ3N_zMUOn-pCJ7nA5Eww5vqL-oArWYkII9kavlZD0"
+              src="https://a0.muscache.com/im/pictures/c3340fda-cc56-4493-8d78-b1ec7b504239.jpg?im_w=720"
             />
-            <div>
-              <span>Vueling</span>
-              <span>VO1367</span>
+            <div class="hotels-section__contents__inform">
+              <h3 class="hotels-section__contents__name">Hotel Mademoiselle</h3>
+              <div>
+                <span>23.2 km</span>
+                <span>Free Wi-Fi</span>
+              </div>
+              <button class="buy-btn">46 $</button>
             </div>
           </div>
-          <div>
-            <span>20/2/2023</span>
-            <span>In 3 days</span>
-          </div>
-          <div>
-            <span>Paris (CDG)</span>
-            <span>07:15</span>
-          </div>
-          <div>
-            <span>Incheone</span>
-            <span>5:00</span>
-          </div>
-          <div>
-            <span>13:45</span>
-            <span>CDG - ICN</span>
-          </div>
-          <button class="buy-btn">870 $</button>
-        </div>
-        <div class="flights-section__contents__inform">
-          <div>
+          <div class="hotels-section__contents">
             <img
-              src="https://mblogthumb-phinf.pstatic.net/20131030_122/jayjaewonhan_13831101361537N6oW_PNG/Asiana-Airlines-logo_%281%29.png?type=w2"
+              src="https://www.jonesaroundtheworld.com/wp-content/uploads/2020/06/best-airbnb-paris.jpg"
             />
-            <div>
-              <span>Asiana</span>
-              <span>T04330</span>
+            <div class="hotels-section__contents__inform">
+              <h3 class="hotels-section__contents__name">
+                Hotel Novotel Paris-Les-Halles
+              </h3>
+              <div>
+                <span>10.7 km</span>
+                <span>Free Wi-Fi</span>
+              </div>
+              <button class="buy-btn">52 $</button>
             </div>
           </div>
-          <div>
-            <span>20/2/2023</span>
-            <span>In 3 days</span>
-          </div>
-          <div>
-            <span>Paris (CDG)</span>
-            <span>02:00</span>
-          </div>
-          <div>
-            <span>Incheone</span>
-            <span>10:00</span>
-          </div>
-          <div>
-            <span>14:00</span>
-            <span>CDG - ICN</span>
-          </div>
-          <button class="buy-btn">930 $</button>
-        </div>
-      </div>
-
-      <div class="section-all">
-        <span>See all flights</span>
-      </div>
-    </section>
-
-    <section class="hotels-section">
-      <div class="section-menu">
-        <span>Hotels</span>
-        <ul>
-          <li>Best Price</li>
-          <li>Distance</li>
-        </ul>
-      </div>
-
-      <main>
-        <div class="hotels-section__contents">
-          <img
-            src="https://static.trip101.com/paragraph_media/pictures/000/490/764/large/2a7fb442_original.jpg?1517469600"
-          />
-          <div class="hotels-section__contents__inform">
-            <h3 class="hotels-section__contents__name">
-              Hotel Paris Quest Acherse
-            </h3>
-            <div>
-              <span>2.3 km</span>
-              <span>Free Wi-Fi</span>
-            </div>
-            <button class="buy-btn">30 $</button>
-          </div>
-        </div>
-        <div class="hotels-section__contents">
-          <img
-            src="https://www.guestapartment.com/wp-content/uploads/2013/01/3-Windows-on-Seine-Paris.png"
-          />
-          <div class="hotels-section__contents__inform">
-            <h3 class="hotels-section__contents__name">
-              L`Hotel du Collectionneur
-            </h3>
-            <div>
-              <span>9.8 km</span>
-              <span>Free Wi-Fi</span>
-            </div>
-            <button class="buy-btn">38 $</button>
-          </div>
-        </div>
-        <div class="hotels-section__contents">
-          <img
-            src="https://56paris.com/storage/uploads/f3313832-3b84-48cc-805f-e6fd14df1d8c/paris-legal-victory-over-airbnb.jpg"
-          />
-          <div class="hotels-section__contents__inform">
-            <h3 class="hotels-section__contents__name">Hotel Eiffel Seine</h3>
-            <div>
-              <span>17.6 km</span>
-              <span>Free Wi-Fi</span>
-            </div>
-            <button class="buy-btn">42 $</button>
-          </div>
-        </div>
-        <div class="hotels-section__contents">
-          <img
-            src="https://a0.muscache.com/im/pictures/c3340fda-cc56-4493-8d78-b1ec7b504239.jpg?im_w=720"
-          />
-          <div class="hotels-section__contents__inform">
-            <h3 class="hotels-section__contents__name">Hotel Mademoiselle</h3>
-            <div>
-              <span>23.2 km</span>
-              <span>Free Wi-Fi</span>
-            </div>
-            <button class="buy-btn">46 $</button>
-          </div>
-        </div>
-        <div class="hotels-section__contents">
-          <img
-            src="https://www.jonesaroundtheworld.com/wp-content/uploads/2020/06/best-airbnb-paris.jpg"
-          />
-          <div class="hotels-section__contents__inform">
-            <h3 class="hotels-section__contents__name">
-              Hotel Novotel Paris-Les-Halles
-            </h3>
-            <div>
-              <span>10.7 km</span>
-              <span>Free Wi-Fi</span>
-            </div>
-            <button class="buy-btn">52 $</button>
-          </div>
-        </div>
-        <div class="hotels-section__contents">
-          <img
-            src="https://media.cntraveler.com/photos/5acf774025b57f283485bf89/master/pass/paris%20home%20airbnb.jpg"
-          />
-          <div class="hotels-section__contents__inform">
-            <h3 class="hotels-section__contents__name">
-              Villa Royale Montsouris
-            </h3>
-            <div>
-              <span>14.8 km</span>
-              <span>Free Wi-Fi</span>
-            </div>
-            <button class="buy-btn">56 $</button>
-          </div>
-        </div>
-      </main>
-
-      <div class="section-all">
-        <span>See all hotels</span>
-      </div>
-    </section>
-
-    <section class="attractions-section">
-      <div class="section-menu">
-        <span>Attractions</span>
-        <ul>
-          <li>All</li>
-          <li>Shopping</li>
-          <li>Show</li>
-          <li>Parks</li>
-          <li>Circuits</li>
-          <li>Museums</li>
-          <li>Monuments</li>
-        </ul>
-      </div>
-
-      <main>
-        <div class="attractions-section__contents big">
-          <img
-            src="https://cdn.britannica.com/54/75854-050-E27E66C0/Eiffel-Tower-Paris.jpg"
-          />
-          <span>Eiffel Tower</span>
-        </div>
-        <div>
-          <div class="attractions-section__contents medium">
+          <div class="hotels-section__contents">
             <img
-              src="https://cdn.getyourguide.com/img/tour/5d4c31d4123d3.jpeg/99.jpg"
+              src="https://media.cntraveler.com/photos/5acf774025b57f283485bf89/master/pass/paris%20home%20airbnb.jpg"
             />
-            <span>Louvres</span>
+            <div class="hotels-section__contents__inform">
+              <h3 class="hotels-section__contents__name">
+                Villa Royale Montsouris
+              </h3>
+              <div>
+                <span>14.8 km</span>
+                <span>Free Wi-Fi</span>
+              </div>
+              <button class="buy-btn">56 $</button>
+            </div>
           </div>
-          <div class="attractions-section__contents medium">
+        </main>
+
+        <div class="section-all">
+          <span>See all hotels</span>
+        </div>
+      </section>
+
+      <section class="attractions-section">
+        <div class="section-menu">
+          <span>Attractions</span>
+          <ul>
+            <li>All</li>
+            <li>Shopping</li>
+            <li>Show</li>
+            <li>Parks</li>
+            <li>Circuits</li>
+            <li>Museums</li>
+            <li>Monuments</li>
+          </ul>
+        </div>
+
+        <main>
+          <div class="attractions-section__contents big">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg/1280px-Notre-Dame_de_Paris%2C_4_October_2017.jpg"
+              src="https://cdn.britannica.com/54/75854-050-E27E66C0/Eiffel-Tower-Paris.jpg"
             />
-            <span>Notre Dame de Paris</span>
+            <span>Eiffel Tower</span>
+          </div>
+          <div>
+            <div class="attractions-section__contents medium">
+              <img
+                src="https://cdn.getyourguide.com/img/tour/5d4c31d4123d3.jpeg/99.jpg"
+              />
+              <span>Louvres</span>
+            </div>
+            <div class="attractions-section__contents medium">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg/1280px-Notre-Dame_de_Paris%2C_4_October_2017.jpg"
+              />
+              <span>Notre Dame de Paris</span>
+            </div>
+          </div>
+          <div class="attractions-section__contents small">
+            <img
+              src="https://parisauthority.com/ckeditor_assets/pictures/637/medium_les-halles-paris.jpg"
+            />
+            <span>Forum des Halles</span>
+          </div>
+          <div class="attractions-section__contents small">
+            <img
+              src="http://www.shuttle-paris.com/images/photos/arc-triomphe-large.jpg"
+            />
+            <span>Arc de Triomphe</span>
+          </div>
+          <div class="attractions-section__contents small">
+            <img
+              src="https://myprivateparis.com/wp-content/uploads/2019/11/pexels-constanze-marie-6664684-scaled-1.jpg"
+            />
+            <span>Sacre Coeur</span>
+          </div>
+        </main>
+
+        <div class="section-all">
+          <span>See all attractions</span>
+        </div>
+      </section>
+
+      <section class="trips-section">
+        <div class="section-menu">
+          <span>Trips</span>
+          <ul>
+            <li>Best Trips</li>
+            <li>Popularity</li>
+          </ul>
+        </div>
+
+        <div class="trip-section__contents">
+          <img
+            src="https://cdn.getyourguide.com/img/tour/95b38fab1a6af255.jpeg/98.jpg"
+          />
+          <div class="trip-section__contents__inform">
+            <span>Eiffel Tower Direct Access Guided Tour by Elevator</span>
+            <span>
+              Skip the ticket line to the Eiffel Tower and take a tour of this
+              famous landmark and admire the city from above. Enjoy a 2-hour
+              guided tour of the tower to hear all about the origins and the
+              secrets behind the construction of this architectural masterpiece.
+              Catch the elevator and ascend to the viewing platform on the
+              second floor, and, if you choose the summit ticket, head all the
+              way to the summit. From there, take in the amazing panoramic views
+              of the French capital, including Sacre Coeur, the Louvre, and the
+              Arc de Triomphe.
+            </span>
           </div>
         </div>
-        <div class="attractions-section__contents small">
+        <div class="trip-section__contents">
           <img
-            src="https://parisauthority.com/ckeditor_assets/pictures/637/medium_les-halles-paris.jpg"
+            src="https://cdn.getyourguide.com/img/tour/5beea81a7c9fc.jpeg/98.jpg"
           />
-          <span>Forum des Halles</span>
+          <div class="trip-section__contents__inform">
+            <span>1-Hour River Seine Cruise</span>
+            <span>
+              Embark on a roundtrip cruise on the River Seine that begins at the
+              foot of the Eiffel Tower. Glide under the bridges of Paris and
+              marvel at a succession of beautiful monuments along the waterway
+              as you listen to commentary about Paris and the sights you pass
+              by. During your cruise, you pass by the Eiffel Tower, Notre Dame,
+              Hotel de Ville, The Louvre, and more. Choose to take your cruise
+              at night for another perspective of the "City of Light" altogether
+              as the city becomes illuminated when evening approaches.
+            </span>
+          </div>
         </div>
-        <div class="attractions-section__contents small">
+        <div class="trip-section__contents">
           <img
-            src="http://www.shuttle-paris.com/images/photos/arc-triomphe-large.jpg"
+            src="https://cdn.getyourguide.com/img/tour/63934b1005e81.jpeg/98.jpg"
           />
-          <span>Arc de Triomphe</span>
+          <div class="trip-section__contents__inform">
+            <span
+              >Versailles: Palace Priority Access Ticket with Audio Guide</span
+            >
+            <span>
+              With your ticket to the Palace of Versailles, skip the lines and
+              get to the palace quickly. During your visit, you will have the
+              opportunity to admire the King's Apartments as well as the famous
+              Hall of Mirrors, a room whose walls are covered with mirrors.
+              Built during the reign of Louis XIV, the Palace of Versailles is
+              one of the greatest symbols of the absolute monarchy and the
+              important role of France in the 18th century.
+            </span>
+          </div>
         </div>
-        <div class="attractions-section__contents small">
-          <img
-            src="https://myprivateparis.com/wp-content/uploads/2019/11/pexels-constanze-marie-6664684-scaled-1.jpg"
-          />
-          <span>Sacre Coeur</span>
+
+        <div class="section-all">
+          <span>See all trips</span>
         </div>
-      </main>
+      </section>
 
-      <div class="section-all">
-        <span>See all attractions</span>
-      </div>
-    </section>
-
-    <section class="trips-section">
-      <div class="section-menu">
-        <span>Trips</span>
-        <ul>
-          <li>Best Trips</li>
-          <li>Popularity</li>
-        </ul>
-      </div>
-
-      <div class="trip-section__contents">
-        <img
-          src="https://cdn.getyourguide.com/img/tour/95b38fab1a6af255.jpeg/98.jpg"
-        />
-        <div class="trip-section__contents__inform">
-          <span>Eiffel Tower Direct Access Guided Tour by Elevator</span>
-          <span>
-            Skip the ticket line to the Eiffel Tower and take a tour of this
-            famous landmark and admire the city from above. Enjoy a 2-hour
-            guided tour of the tower to hear all about the origins and the
-            secrets behind the construction of this architectural masterpiece.
-            Catch the elevator and ascend to the viewing platform on the second
-            floor, and, if you choose the summit ticket, head all the way to the
-            summit. From there, take in the amazing panoramic views of the
-            French capital, including Sacre Coeur, the Louvre, and the Arc de
-            Triomphe.
-          </span>
+      <footer>
+        <div class="footer-cities">
+          <nav>
+            <span>Cities</span>
+            <ul>
+              <li>Paris</li>
+              <li>Miami</li>
+              <li>London</li>
+              <li>Madrid</li>
+              <li>Tokyo</li>
+              <li>Pekin</li>
+            </ul>
+          </nav>
         </div>
-      </div>
-      <div class="trip-section__contents">
-        <img
-          src="https://cdn.getyourguide.com/img/tour/5beea81a7c9fc.jpeg/98.jpg"
-        />
-        <div class="trip-section__contents__inform">
-          <span>1-Hour River Seine Cruise</span>
-          <span>
-            Embark on a roundtrip cruise on the River Seine that begins at the
-            foot of the Eiffel Tower. Glide under the bridges of Paris and
-            marvel at a succession of beautiful monuments along the waterway as
-            you listen to commentary about Paris and the sights you pass by.
-            During your cruise, you pass by the Eiffel Tower, Notre Dame, Hotel
-            de Ville, The Louvre, and more. Choose to take your cruise at night
-            for another perspective of the "City of Light" altogether as the
-            city becomes illuminated when evening approaches.
-          </span>
+        <div class="footer-explore">
+          <nav>
+            <span>Explore</span>
+            <ul>
+              <li>Register</li>
+              <li>Login</li>
+              <li>Assistance</li>
+              <li>Eco</li>
+            </ul>
+          </nav>
         </div>
-      </div>
-      <div class="trip-section__contents">
-        <img
-          src="https://cdn.getyourguide.com/img/tour/63934b1005e81.jpeg/98.jpg"
-        />
-        <div class="trip-section__contents__inform">
-          <span
-            >Versailles: Palace Priority Access Ticket with Audio Guide</span
-          >
-          <span>
-            With your ticket to the Palace of Versailles, skip the lines and get
-            to the palace quickly. During your visit, you will have the
-            opportunity to admire the King's Apartments as well as the famous
-            Hall of Mirrors, a room whose walls are covered with mirrors. Built
-            during the reign of Louis XIV, the Palace of Versailles is one of
-            the greatest symbols of the absolute monarchy and the important role
-            of France in the 18th century.
-          </span>
+        <div class="footer-about">
+          <nav>
+            <span>About us</span>
+            <ul>
+              <li>About TravelCream</li>
+              <li>Careers</li>
+              <li>Blog</li>
+              <li>Privacy Policy</li>
+              <li>Terms of Usage</li>
+            </ul>
+          </nav>
         </div>
-      </div>
-
-      <div class="section-all">
-        <span>See all trips</span>
-      </div>
-    </section>
-
-    <footer></footer>
+        <div class="footer-contact">
+          <nav>
+            <span>Contact</span>
+            <ul>
+              <li>Feel to get in touch via email</li>
+              <li>suport@travelcream.com</li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
 
     <script src="main.js"></script>
   </body>

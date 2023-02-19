@@ -1,0 +1,78 @@
+header {
+  background-image: url("https://i.ytimg.com/vi/MW8F7-4uzf0/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 500px;
+  padding: 20px 120px;
+  margin-bottom: 30px;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu span {
+  font-size: var(--small-size);
+  margin-right: 20px;
+  color: white;
+}
+
+.header-menu span:first-child {
+  font-size: 20px;
+  font-weight: var(--bold-weight);
+}
+
+.header-menu button {
+  margin-left: auto;
+  height: 31px;
+  width: 100px;
+  background: none;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+}
+
+.header-heading {
+  color: white;
+  height: 93%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-heading span:first-child {
+  font-size: 50px;
+  font-weight: var(--bold-weight);
+  margin-bottom: 30px;
+}
+
+.header-heading span:last-child {
+  font-size: var(--medium-size);
+}
+
+.header-btns {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-btns button {
+  background-color: white;
+  color: var(--light-grey);
+  border: var(--border);
+  height: 45px;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.header-btns .search-btn button {
+  background-color: var(--pink);
+  color: white;
+  border: none;
+}

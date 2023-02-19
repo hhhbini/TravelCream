@@ -1,0 +1,24 @@
+footer {
+  display: flex;
+}
+
+footer div {
+  width: 25%;
+  height: 250px;
+}
+
+footer ul {
+  font-size: var(--small-size);
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+footer li {
+  margin-bottom: 10px;
+  color: var(--light-grey);
+}
+
+.footer-contact li:last-child {
+  color: var(--pink);
+}
